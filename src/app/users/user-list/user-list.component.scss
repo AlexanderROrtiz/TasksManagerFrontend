@@ -1,0 +1,80 @@
+.user-list-container {
+  background-color: #e3f2fd; /* Fondo azul claro */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #2196F3;
+  color: white;
+}
+
+.action-button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #125699;
+}
+
+.register-button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #125699;
+}
+
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea a la izquierda */
+}
+
+.back-button {
+  background-color: #2265c9;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  position: absolute; /* Posiciona el botón */
+  right: 20px; /* Espacio desde la derecha */
+  top: 20px; /* Espacio desde la parte superior */
+}
+
+.action-button {
+  margin-right: 10px; /* Espacio entre botones de acción */
+}

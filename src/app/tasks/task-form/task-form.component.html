@@ -1,0 +1,31 @@
+<div class="task-form-container">
+  <h1>{{ isEditMode ? 'Editar Tarea' : 'Crear Nueva Tarea' }}</h1>
+
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input id="title" formControlName="title" class="form-control" />
+      <div *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched" class="error">
+        El título es obligatorio.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descripción</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+      <div *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched" class="error">
+        La descripción es obligatoria.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="assignedToUserId">Asignado a (ID de Usuario)</label>
+      <input id="assignedToUserId" type="number" formControlName="assignedToUserId" class="form-control" />
+    </div>
+
+    <button type="submit" class="action-button">
+      {{ isEditMode ? 'Actualizar Tarea' : 'Crear Tarea' }}
+    </button>
+    <button type="button" (click)="goToTask()">Cancelar</button>
+  </form>
+</div>

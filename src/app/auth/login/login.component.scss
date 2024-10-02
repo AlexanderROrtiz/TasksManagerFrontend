@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8; /* Fondo gris claro para contraste */
+  height: 100vh; /* Altura completa de la ventana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background-color: #e3f2fd; /* Fondo azul claro */
+  padding: 40px; /* Aumentar el padding para más espacio alrededor */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto; /* Margen superior para centrar verticalmente */
+  display: flex; /* Usar flexbox para centrar contenido */
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 100%; /* Asegurarse de que el grupo ocupe todo el ancho */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Espaciado entre campos */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centrar botones horizontalmente */
+  gap: 30px; /* Aumentar el espaciado entre botones */
+  margin-top: 20px; /* Espacio superior para separar de los inputs */
+}
+
+button {
+  padding: 10px 15px; /* Espaciado interno del botón */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #1976d2; /* Color de fondo azul */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s;
+  width: 100%; /* Botón ocupa todo el ancho */
+}
+
+button:hover {
+  background-color: #125699; /* Color al pasar el mouse */
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  margin-top: 18px; /* Espacio superior para el mensaje de error */
+}

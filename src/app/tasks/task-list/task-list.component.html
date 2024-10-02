@@ -1,0 +1,35 @@
+<div class="task-list-container">
+  <h1>Listado de Tareas</h1>
+  <button *ngIf="isAdmin" class="register-button" (click)="createTask()">Crear Nueva Tarea</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+        <th>Creada el</th>
+        <th>Actualizada el</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.id }}</td>
+        <td>{{ task.title }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.createdAt | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>{{ task.updatedAt | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>
+          <button class="action-button" (click)="viewTask(task.id)">Ver Detalles</button>
+          <button *ngIf="isSupervisorOrAdmin" class="action-button" (click)="editTask(task.id)">Editar</button>
+          <button *ngIf="isAdmin" class="action-button delete-button" (click)="deleteTask(task.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="tasks.length === 0" class="no-tasks-message">
+    No hay tareas disponibles.
+  </div>
+</div>

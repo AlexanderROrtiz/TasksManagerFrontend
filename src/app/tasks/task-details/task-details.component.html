@@ -1,0 +1,11 @@
+<div *ngIf="task" class="task-detail-container">
+  <h2>Detalle de las Tareas</h2>
+  <p><strong>Title:</strong> {{ task.title }}</p>
+  <p><strong>Description:</strong> {{ task.description }}</p>
+  <p><strong>Status:</strong> {{ task.status }}</p>
+  <p><strong>Created At:</strong> {{ task.createdAt | date: 'short' }}</p>
+  <p><strong>Updated At:</strong> {{ task.updatedAt | date: 'short' }}</p>
+  <p *ngIf="task.assignedToUserId"><strong>Assigned User ID:</strong> {{ task.assignedToUserId }}</p>
+
+  <button  class="btn btn-primary">Back to List</button>
+</div>
